@@ -1,0 +1,46 @@
+.page-pago .pago-hero {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 767.98px) {
+    .page-pago .pago-hero {
+        padding-top: calc(6.25rem + env(safe-area-inset-top, 0px));
+    }
+}
+
+.pago-stub-icon {
+    font-size: 2.5rem;
+    color: var(--secondary-accent);
+    opacity: 0.85;
+}
+
+.pago-stub-panel {
+    text-align: center;
+    border: 1px solid rgba(162, 155, 254, 0.2);
+}
+
+.pago-stub-panel--narrow {
+    max-width: 32rem;
+}
+
+.pago-stub-email-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary-accent);
+}
+
+.pago-stub-email-value {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-main);
+    word-break: break-word;
+    margin-bottom: 0;
+}
+
+.pago-stub-hint {
+    line-height: 1.55;
+    font-weight: 300;
+}

@@ -1,0 +1,88 @@
+/* Login / register — same tokens as the rest of the site */
+.page-auth {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--luddies-bg-gradient);
+}
+
+.page-auth__hero {
+    padding: clamp(2rem, 5vw, 3.5rem) 0 1.5rem;
+}
+
+.page-auth__card {
+    max-width: 440px;
+    margin: 0 auto 3rem;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(74, 63, 77, 0.08);
+    border: 1px solid rgba(162, 155, 254, 0.2);
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    position: relative;
+}
+
+.page-auth__brand {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.page-auth__brand-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 0.85rem;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+}
+
+.page-auth__brand-link:hover {
+    opacity: 0.9;
+}
+
+.page-auth__brand-link:focus-visible {
+    outline: 2px solid var(--primary-accent, #a29bfe);
+    outline-offset: 4px;
+}
+
+.page-auth__brand-link:hover img,
+.page-auth__brand-link:focus-visible img {
+    transform: scale(1.04);
+}
+
+.page-auth__brand img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.15s ease;
+}
+
+.page-auth__title {
+    color: var(--secondary-accent, #2f2630);
+    font-weight: 600;
+    font-size: 1.35rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.page-auth__lead {
+    text-align: center;
+    color: #5c5460;
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+}
+
+.page-auth__footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6b6370;
+    margin-top: 1.25rem;
+}
+
+.page-auth__footer a {
+    color: var(--primary-accent, #a29bfe);
+    font-weight: 600;
+}
+
+.page-auth--no-nav .navbar-glass {
+    display: none;
+}

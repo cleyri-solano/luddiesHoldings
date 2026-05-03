@@ -1,24 +1,82 @@
-# Luddies: Marketplace Educativo STEM
+# Luddies Holdings
 
-## Descripción del Proyecto
-[cite_start]Luddies es una plataforma enfocada en la educación STEM+ para Latinoamérica, iniciando en México. [cite_start]Su propósito es profesionalizar el talento pedagógico mediante un marketplace de "Activos Pedagógicos Estandarizados", ofreciendo soluciones estructuradas para docentes y padres de familia[cite: 8, 10].
+Proyecto frontend de Luddies, un marketplace educativo STEM con enfoque en recursos pedagogicos digitales y experiencias para aula.
 
-## Catálogo de Productos
-* [cite_start]**Activos Digitales:** PDFs, presentaciones dinámicas y scripts de planeación[cite: 17].
-* [cite_start]**Kits de Experiencias (Físicos):** Narrativas, dinámicas, juegos y códigos para el aula[cite: 18].
-* [cite_start]**Inclusión y Diversidad:** Material adaptado para neurodiversidad (TDAH, Dislexia, Autismo) [cite: 19] [cite_start]y una sección dedicada a mujeres en STEM[cite: 21].
+Este README explica el panorama general del repositorio.  
+El detalle tecnico y operativo del frontend esta en `client/README.md`.
 
-## Módulos de la Plataforma
-[cite_start]El ecosistema se divide en tres áreas fundamentales[cite: 38]:
-1. [cite_start]**Luddies Community:** Espacio interactivo para que docentes y creadores compartan perspectivas[cite: 39].
-2. [cite_start]**Luddies Marketplace:** El núcleo de comercio de activos digitales y físicos[cite: 16, 38].
-3. [cite_start]**Luddies Certifications:** Sistema de validación e instrucción para garantizar que los creadores cumplan con las normas y estándares visuales de la marca[cite: 34, 38, 39].
+## Vision del proyecto
 
-## Roles de Usuario
-* [cite_start]**Admin:** Curación de contenido, moderación y gestión[cite: 43].
-* [cite_start]**Cliente:** Docentes, padres y directivos que consumen el material[cite: 44].
-* [cite_start]**Creador / Creador Certificado:** Usuarios que monetizan sus recursos, con la opción de pasar un filtro de calidad pedagógica para obtener certificación[cite: 45, 46].
+Luddies busca conectar creadores de material educativo con docentes, familias e instituciones, a traves de un catalogo curado de contenido STEM.
 
-## Vías de Monetización
-* [cite_start]**B2C (Directa):** Venta individual de recursos al usuario final[cite: 51].
-* [cite_start]**B2B (Indirecta):** Venta de licencias institucionales para colegios[cite: 52].
+En esta etapa, el repositorio contiene una implementacion **frontend demo** para validar:
+
+- navegacion de la experiencia principal,
+- autenticacion por roles,
+- administracion de productos,
+- internacionalizacion ES/EN,
+- y flujo de compra simulado.
+
+## Estado actual
+
+- Implementacion activa dentro de `client/`.
+- Aplicacion multipagina (HTML, CSS, Bootstrap, JavaScript).
+- Persistencia local del navegador (`localStorage` / `sessionStorage`).
+- Sin backend productivo integrado por ahora.
+- Base preparada para migrar a Spring Boot en una fase posterior.
+
+## Estructura del repositorio
+
+```text
+luddiesHoldings/
+  README.md
+  README copy.md
+  client/
+    README.md
+    tasks.txt
+    index.html
+    html/
+    js/
+    style/
+    images/
+```
+
+## Que documenta cada archivo
+
+- `README.md` (este archivo): contexto general y organizacion del repo.
+- `client/README.md`: ejecucion, arquitectura cliente, credenciales demo, modulos y flujos.
+- `client/tasks.txt`: requerimientos originales de las tareas implementadas.
+
+## Dominios funcionales cubiertos
+
+- **Autenticacion:** registro, inicio/cierre de sesion, control de acceso por ruta.
+- **Catalogo:** render dinamico y filtros por categorias.
+- **Admin:** CRUD de productos y gestion basica de usuarios.
+- **Internacionalizacion:** interfaz ES/EN sin recarga completa.
+- **Checkout/Pago:** flujo visual y de continuidad de experiencia.
+
+## Alcance tecnico (alto nivel)
+
+- UI responsive basada en Bootstrap.
+- JavaScript modular con IIFE para encapsular comportamiento por feature.
+- Datos demo iniciales (usuarios y catalogo) sembrados en cliente.
+- Estado de sesion y datos operativos almacenados localmente.
+
+## Convenciones de desarrollo
+
+- Mantener nuevas piezas JS en patron IIFE para consistencia con el codigo actual.
+- Evitar hardcode de llaves de storage fuera de `client/js/luddies-storage-keys.js`.
+- Agregar estilos nuevos por pagina en `client/style/pages/` cuando aplique.
+- Mantener copy de UI bilingue en `client/js/i18n.js`.
+
+## Roadmap sugerido
+
+1. Integrar APIs de autenticacion, usuarios y catalogo (Spring Boot).
+2. Sustituir passwords en texto plano por flujo seguro backend.
+3. Persistir entidades en base de datos.
+4. Definir contrato de API (OpenAPI/Swagger).
+5. Incorporar pruebas automatizadas de regresion UI.
+
+## Inicio rapido
+
+Para correr el proyecto localmente, revisa `client/README.md` en la seccion de ejecucion.

@@ -1,0 +1,302 @@
+/**
+ * Filter catalog grid by data-catalog-cats.
+ * Supports multiple .catalog-filter-root (desktop sidebar + mobile offcanvas).
+ * Supports multi-select: clicking a filter toggles it on/off.
+ * Clicking "all" clears all active filters and shows everything.
+ */
+.page-contact {
+    background: var(--luddies-bg-gradient);
+    background-color: var(--bg-soft);
+    background-attachment: fixed;
+}
+
+.page-contact .contact-main {
+    min-height: 60vh;
+}
+
+.page-contact .contact-hero {
+    background: transparent;
+    padding-top: 6rem;
+    padding-bottom: 1.25rem;
+}
+
+.page-contact .contact-body-section {
+    padding-top: 0;
+}
+
+.contact-unified-card {
+    background: #ffffff;
+    border: 1.5px solid rgba(162, 155, 254, 0.18);
+    border-radius: 2rem;
+    box-shadow: 0 4px 28px rgba(74, 63, 77, 0.07);
+    overflow: hidden;
+}
+
+.contact-form-col {
+    padding: 2.75rem 3rem;
+    border-right: 1.5px solid rgba(162, 155, 254, 0.18);
+}
+
+.contact-form-header {
+    margin-bottom: 1.75rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(162, 155, 254, 0.2);
+}
+
+.contact-form-intro {
+    font-size: 0.95rem;
+    opacity: 0.88;
+    line-height: 1.6;
+    font-weight: 300;
+    max-width: 36rem;
+}
+
+.contact-form-section {
+    margin-bottom: 1.75rem;
+}
+
+.contact-form-section--message {
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(162, 155, 254, 0.15);
+}
+
+.contact-section-heading {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--secondary-accent);
+    margin-bottom: 1rem;
+    opacity: 0.95;
+}
+
+.contact-side-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contact-side-col__inner {
+    padding: 2.75rem 2.75rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.contact-side-col__inner .info-card-title {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--secondary-accent);
+    margin-bottom: 0.2rem;
+}
+
+.contact-side-col__inner .info-card-copy {
+    font-size: 0.84rem;
+    color: var(--text-main);
+    opacity: 0.65;
+    font-weight: 300;
+    margin-bottom: 1.75rem;
+}
+
+.contact-side-socials {
+    margin-top: 1.75rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(162, 155, 254, 0.15);
+}
+
+.contact-side-socials__label {
+    font-size: 0.79rem;
+    font-weight: 600;
+    color: var(--text-main);
+    letter-spacing: 0.02em;
+    margin-bottom: 0.75rem;
+}
+
+.form-control-luddies--message {
+    min-height: 9rem;
+    resize: vertical;
+}
+
+.success-banner {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 2rem 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.success-banner.visible {
+    display: flex !important;
+}
+
+.success-icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a29bfe, #9e6c7c);
+    position: relative;
+}
+
+.success-icon::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    width: 0.5rem;
+    height: 1rem;
+    border: solid #2f2630;
+    border-width: 0 3px 3px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.form-label-luddies {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.35rem;
+    font-size: 0.9rem;
+}
+
+.form-control-luddies {
+    border: 1px solid rgba(162, 155, 254, 0.35);
+    border-radius: 0.75rem;
+    padding: 0.65rem 1rem;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 0.95rem;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control-luddies:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(162, 155, 254, 0.2);
+}
+
+.form-control-luddies.is-invalid {
+    border-color: #dc3545;
+}
+
+.form-control-luddies.is-valid {
+    border-color: #198754;
+}
+
+.error-msg {
+    display: none;
+    align-items: flex-start;
+    gap: 0.35rem;
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 0.35rem;
+    margin-bottom: 0;
+}
+
+.error-msg.visible {
+    display: flex;
+}
+
+.char-counter {
+    font-size: 0.75rem;
+    opacity: 0.65;
+    text-align: right;
+    margin-top: 0.25rem;
+    margin-bottom: 0;
+}
+
+.char-counter.near-limit {
+    color: #856404;
+    font-weight: 600;
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.info-item .pill-icon {
+    flex-shrink: 0;
+}
+
+.info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.info-text strong {
+    color: var(--secondary-accent);
+    font-size: 0.9rem;
+}
+
+.info-text span {
+    font-size: 0.875rem;
+    opacity: 0.85;
+}
+
+.btn-submit.loading .btn-text {
+    opacity: 0.5;
+}
+
+.btn-submit.loading .spinner-btn {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(47, 38, 48, 0.25);
+    border-top-color: #2f2630;
+    border-radius: 50%;
+    animation: luddies-spin 0.7s linear infinite;
+}
+
+.spinner-btn {
+    display: none;
+}
+
+@keyframes luddies-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 767.98px) {
+    .page-contact .contact-hero {
+        padding-top: calc(6.25rem + env(safe-area-inset-top, 0px));
+    }
+
+    .contact-form-col {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .contact-side-col__inner {
+        padding: 1.75rem 1.25rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .contact-form-col {
+        border-right: none;
+        border-bottom: 1.5px solid rgba(162, 155, 254, 0.18);
+        padding: 2rem;
+    }
+
+    .contact-side-col__inner {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .btn-submit,
+    .btn-luddies--submit {
+        width: 100%;
+    }
+
+    .contact-unified-card {
+        border-radius: 1.25rem;
+    }
+}

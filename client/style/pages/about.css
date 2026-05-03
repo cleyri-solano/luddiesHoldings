@@ -1,0 +1,157 @@
+@media (max-width: 767.98px) {
+    body[data-site-page="about"] .hero-about {
+        padding-bottom: 1.5rem;
+    }
+
+    body[data-site-page="about"] .about-who-section.page-section.pt-0 {
+        padding-top: 1.5rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+}
+
+.team-section.page-section {
+    padding-top: 0rem;
+    padding-bottom: 1.5rem;
+}
+
+.team-section__intro {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 767.98px) {
+    .team-section__intro {
+        margin-bottom: 0.75rem;
+    }
+}
+
+.carousel-bleed {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    /*padding-left: max(1rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1rem, env(safe-area-inset-right, 0px));*/
+    /*padding-top: 0.35rem;*/ 
+    padding-bottom: 1.5rem;
+    overflow-x: hidden;
+    background: transparent;
+    border-radius: 1.75rem;
+}
+
+.carrusel {
+    overflow: visible;
+    max-width: none;
+    margin: 0;
+    padding: 0.35rem 0 0.5rem;
+}
+
+.carrusel .track {
+    /*padding: 0.35rem 0.75rem 0.65rem;*/
+    padding-left: max(1rem, env(safe-area-inset-left, 0px));
+    padding-right: max(1rem, env(safe-area-inset-right, 0px));
+}
+
+.carrusel .brand-card {
+    flex: 0 0 250px;
+    transform: none;
+    border-radius: 1.75rem;
+    /*background: #fff;*/
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 4px 6px rgba(74, 63, 77, 0.04), 0 18px 48px rgba(74, 63, 77, 0.1),
+        0 0 0 1px rgba(162, 155, 254, 0.08);
+    transition: box-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.carrusel .brand-card:hover {
+    transform: none;
+    filter: saturate(1.03);
+    box-shadow: 0 8px 16px rgba(74, 63, 77, 0.06), 0 28px 56px rgba(74, 63, 77, 0.14),
+        0 0 0 1px rgba(162, 155, 254, 0.18);
+}
+
+.track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+}
+
+@media (max-width: 575.98px) {
+    .carousel-bleed {
+        padding-top: 0.25rem;
+        padding-bottom: 1.35rem;
+    }
+
+    .carrusel .brand-card {
+        flex-basis: min(250px, 78vw);
+    }
+}
+
+.hero-about {
+    padding: 7.5rem 0 var(--section-padding-y);
+    /*background: var(--luddies-bg-gradient);*/
+}
+
+main {
+    background: var(--luddies-bg-gradient);
+}
+/*ARROWS*/
+.carousel-bleed .carrusel {
+    position: relative;
+    width: 100%;
+}
+.nav-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 20;
+
+    border: none;
+    cursor: pointer;
+
+    font-size: 70px;
+    color: white;
+
+
+    padding: 0;
+    margin: 0;
+
+    opacity: 0;
+    transition: opacity 0.25s ease, background 0.25s ease;
+}
+.prev {
+    left: 0;
+     background: linear-gradient(
+            to right,
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0)
+    );
+}
+
+.next {
+    right: 0;
+    margin-right: 0;
+    background: linear-gradient(
+            to left,
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0)
+    );
+}
+.carrusel:hover .nav-btn {
+    opacity: 1;
+}
+.nav-btn {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: manipulation;
+}
+
+.carrusel:not(:hover) .nav-btn {
+    pointer-events: none;
+}
